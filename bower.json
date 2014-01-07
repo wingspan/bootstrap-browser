@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-browser",
+  "name": "cool-library",
   "version": "0.0.1",
   "homepage": "https://github.com/dustingetz/bootstrap-browser",
   "authors": ["Dustin Getz"],
@@ -13,13 +13,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~1.9.1",
-    "underscore": "~1.4.4",
-    "react": "~0.5.2",
-    "requirejs": "~2.1.9",
-    "requirejs-text": "~2.0.10",
-    "underscore.string": "~2.3.3",
-    "kendo-ui": "~2013.3.1119",
-    "es5-shim": "~2.1"
+      "almond": "~0.2.7",
+      "stacktrace": "~0.5.3",
+      "underscore": "~1.4.4",
+      "react": "~0.5.2"
   }
 }

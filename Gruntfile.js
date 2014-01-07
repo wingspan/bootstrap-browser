@@ -41,31 +41,28 @@ module.exports = function (grunt) {
                     inlineText: true,
                     useStrict: true,
                     skipPragmas: true,
-                    out: 'dist/app.js',
-                    include: ['app'],
-
                     preserveLicenseComments: true,
+
+                    out: 'dist/cool-library.js',
+                    include: ['almond', 'cool-library'],
+                    exclude: ['underscore', 'react'],
+                    wrap: {
+                        "startFile": "almond-begin.txt",
+                        "endFile": "almond-end.txt"
+                    },
 
                     baseUrl: 'js-built',
 
                     paths: {
                         textassets: '../textassets', // all assets loaded via `text!` must be rooted here so the JSX compiler works.
-                        text: '../bower_components/requirejs-text/text',
+                        stacktrace: '../bower_components/stacktrace/stacktrace',
+                        almond: '../bower_components/almond/almond',
                         underscore: '../bower_components/underscore/underscore',
-                        'underscore-string': '../bower_components/underscore.string/lib/underscore.string',
-                        jquery: '../bower_components/jquery/jquery',
-                        kendo: '../bower_components/kendo-ui/src/js/kendo.web',
-                        moment: '../bower_components/momentjs/moment',
-                        react: '../bower_components/react/react',
-                        stacktrace: '../bower_components/stacktrace/stacktrace'
+                        react: '../bower_components/react/react'
                     },
 
                     shim: {
                         'underscore': { deps: [], exports: '_' },
-                        'underscore-string': { exports: ['_s'] },
-                        'jquery': { deps: [], exports: '$' },
-                        'kendo': { deps: [], exports: 'kendo' },
-                        'moment': { deps: [], exports: 'moment' },
                         'react': { deps: [], exports: 'React'}
                     },
 
@@ -92,7 +89,7 @@ module.exports = function (grunt) {
                     report: 'min'
                 },
                 files: {
-                    'dist/app.css': 'styles/app.less'
+                    'dist/cool-library.css': 'styles/cool-library.less'
                 }
             }
         },
