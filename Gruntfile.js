@@ -12,16 +12,6 @@ module.exports = function (grunt) {
             '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
             ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
 
-        // Task configuration.
-//        jshint: {
-//            platform: 'webapp/js/platform/**/*.js',
-//            tmf: 'webapp/js/tmf/**/*.js',
-//
-//            options: {
-//                jshintrc: '.jshintrc'
-//            }
-//        },
-
         react: {
             options: {
                 extension: 'js'
